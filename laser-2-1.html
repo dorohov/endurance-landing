@@ -21,15 +21,20 @@
 
 <script src="/js/jquery.min.js" ></script>
 <script src="/js/bootstrap.min.js" ></script>
+<!-- <script src="/js/device.min.js" ></script> -->
 <script src="/js/storage.js" ></script>
 
-<script src="/js/document-ready.js" ></script>
+<script src="/js/document-ready.js" ></script> 
 <script>
 	$(document).ready(function() {
 		$('img').addClass('img-responsive');
 		var url = window.location.pathname;
 		$('.navbar-nav a[href="'+url+'"]').parent().addClass('active');
 		$('.carousel .item').eq('0').addClass('active');
+
+		/*if (device.mobile()){
+			$('.video-products-block video').removeAttr('autoplay').removeAttr('loop');
+		} */
 	})
 </script>
 	</head>
@@ -221,11 +226,12 @@
 			</div>			
 		</main>			
 		<div class="video-products-block">	
-	<video autoplay loop muted> 
+	<video autoplay loop muted poster="/img/tpl/laser-3.5-poster.jpg"> 
 		<source src="/video/laser-2-1.mp4" type="video/mp4">
 		<source src="/video/laser-2-1.webm" type="video/webm">
 	</video>
-	<div class="fadein-video"></div>
+	<div class="fadein-video">
+		<div class="play-btn"><span class="glyphicon glyphicon-play"></span></div></div>
 	<div class="video-products-block__caption">	
 		<div class="container">
 			<div class="row">
@@ -237,7 +243,7 @@
 				</div>
 			</div>
 		</div>	
-	</div>	
+	</div>	 
 </div>		
 		<div class="content-block">
 			<div class="container">

@@ -21,15 +21,20 @@
 
 <script src="/js/jquery.min.js" ></script>
 <script src="/js/bootstrap.min.js" ></script>
+<!-- <script src="/js/device.min.js" ></script> -->
 <script src="/js/storage.js" ></script>
 
-<script src="/js/document-ready.js" ></script>
+<script src="/js/document-ready.js" ></script> 
 <script>
 	$(document).ready(function() {
 		$('img').addClass('img-responsive');
 		var url = window.location.pathname;
 		$('.navbar-nav a[href="'+url+'"]').parent().addClass('active');
 		$('.carousel .item').eq('0').addClass('active');
+
+		/*if (device.mobile()){
+			$('.video-products-block video').removeAttr('autoplay').removeAttr('loop');
+		} */
 	})
 </script>
 	</head>
@@ -224,11 +229,12 @@
 			</div>			
 		</main>	
 		<div class="video-products-block">	
-	<video autoplay loop muted> 
+	<video autoplay loop muted poster="/img/tpl/laser-5-poster.jpg"> 
 		<source src="/video/laser-2-1.mp4" type="video/mp4">
 		<source src="/video/laser-2-1.webm" type="video/webm">
 	</video>
-	<div class="fadein-video"></div>
+	<div class="fadein-video">
+		<div class="play-btn"><span class="glyphicon glyphicon-play"></span></div></div>
 	<div class="video-products-block__caption">	
 		<div class="container">
 			<div class="row">
@@ -240,13 +246,32 @@
 				</div>
 			</div>
 		</div>	
-	</div>	
+	</div>	 
 </div>
 		<div class="content-block">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						 						
+						<div class="video-block video__second-page">	
+	<video autoplay loop muted poster="/img/tpl/laser-5-poster.jpg"> 
+		<source src="/video/laser-2-1.mp4" type="video/mp4">
+		<source src="/video/laser-2-1.webm" type="video/webm">
+	</video>
+	<div class="fadein-video">
+		<div class="play-btn"><span class="glyphicon glyphicon-play"></span></div></div>
+	<div class="video-products-block__caption">	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">		
+					<h3 class="heading-block">Operation</h3>
+					<div>No installation process is required. Just run gcode for 3D printing or engraving/cutting.</div>
+					<div>&nbsp;</div>
+					<div>Can be used as a 3D printer and a laser engraving and cutting machine. Put a piece you want to cut or engrave onto a worktop. Convert a  *.jpeg image it into a vector one and then into gcode. Run engraving. Enjoy the process.</div>
+				</div>
+			</div>
+		</div>	
+	</div>	 
+</div> 						
 					</div>					
 				</div>
 			</div>			
