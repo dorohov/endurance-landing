@@ -34,6 +34,8 @@ ul{
 }
 .soc-icon-main{}
 .soc-icon-item{
+	.transition(@duration:0.2s, @ease:ease-out);
+	display: inline-block;
 	&:before{
 		font-family: @icon-base;
 		color: @blue;
@@ -50,6 +52,9 @@ ul{
 	}
 	&.item-linkd:before{
 		content: @icon-linkd;
+	}
+	&:hover{
+		.scale(@ratio:1.2);
 	}
 }
 .btn-blue{
