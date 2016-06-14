@@ -4,6 +4,7 @@
 	@proxima: proximanovaregular-webfont;
 	@proxima-bold: proximanovabold-webfont;
 	@icon-base: flaticon;
+	@icon-base-tw: tw;
 	.include-custom-font(@family: @gotham, @weight: normal, @style: normal){
 		@font-face{			
 			font-family: "@{family}";			
@@ -22,6 +23,7 @@
 	.include-custom-font(@family: @proxima, @weight: normal, @style: normal);
 	.include-custom-font(@family: @proxima-bold, @weight: normal, @style: normal);
 	.include-custom-font(@family: @icon-base, @weight: normal, @style: normal);
+	.include-custom-font(@family: @icon-base-tw, @weight: normal, @style: normal);
 
 
 	.mixin-headings(@font-family: @gotham, @font-size: 20px, @line-height: 26px, @color: @black){
@@ -35,3 +37,6 @@
 	@icon-linkd: 	"\e001";
 	@icon-search: 	"\e002";
 	@icon-yb: 		"\e003"; 
+
+	@icon-tw: 		"\f100"; 
+	@icon-tw2: 		"\f101"; 
