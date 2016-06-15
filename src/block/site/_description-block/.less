@@ -10,3 +10,46 @@
 .description-block__line{
 	margin-bottom: 50px;
 }
+.description-block-table{
+	//margin-top: 30px;    
+	background: #f9f8f7;
+	padding: 50px 0;
+}
+.db__table{
+	width: 100%;
+    font-size: 13px;
+    line-height: 18px;
+	thead{
+		td, th{
+			text-align: center;
+			font-size: 14px;
+			line-height: 20px;
+			padding: 10px 12px;
+			font-family: @proxima-bold;
+		}
+	}
+	td, th{
+		padding: 4px 12px;
+		text-transform: uppercase;
+	}
+	tbody{
+		td{
+			&:nth-child(1){
+				padding: 4px 12px 4px 24px;
+			}
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4),
+			&:nth-child(5){text-align: center;}
+			&:nth-child(6){
+				width: 260px;
+			}
+		}
+		th{
+			padding: 10px 12px;
+			font-size: 14px;
+			line-height: 20px;
+			font-family: @proxima-bold;
+		}
+	}
+}
